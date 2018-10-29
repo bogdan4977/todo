@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="JSX" />
+  </component>
+  <component name="MagicentoSettings">
+    <option name="pathToMage" value="D:/OpenServer/domains/local.belle/app/Mage.php" />
+    <option name="pathToMagentoForNewFiles" value="D:/OpenServer/domains/local.belle" />
+    <option name="pathToMage" value="D:/OpenServer/domains/local.belle/app/Mage.php" />
+    <option name="pathToPhp" value="" />
+    <option name="urlToMagento" value="" />
+    <option name="packages" value="" />
+    <option name="themes" value="" />
+    <option name="basicAuthUsername" value="" />
+    <option name="basicAuthPassword" value="" />
+    <option name="pathsToMagentoSerialized" value="D:/OpenServer/domains/local.belle" />
+  </component>
+  <component name="VagrantProjectSettings">
+    <option name="instanceFolder" value="" />
+    <option name="provider" value="" />
+  </component>
+</project>
