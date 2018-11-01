@@ -1,0 +1,18 @@
+//import
+@import "App_variables";
+@import "../FormTodo/FormTodo";
+
+//main styles
+@mixin flex($justify-content, $align-items){
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+#root{
+  @include flex(center,center);
+  padding: 1%;
+  color: $text-color;
+}
+.todo-container{
+  max-width: $list-width;
+}
