@@ -1,20 +1,12 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import {string, func} from 'prop-types';
 
-const {string, func} = PropTypes;
-class FormTodo extends Component {
-    render() {
-        const {currentTodo, handleClick, handleChange} = this.props;
-        return (
-            <div className='form-box'>
-                <form action="">
-                    <input type='text' value={currentTodo} onChange={handleChange}/>
-                    <button type='button' onClick={handleClick}>Add</button>
-                </form>
-            </div>
-        );
-    }
-}
+const FormTodo = ({currentTodo, handleChange, handleClick}) => (
+    <div className='form-box'>
+        <input type='text' value={currentTodo} onChange={handleChange}/>
+        <button type='button' onClick={handleClick}>Add item</button>
+    </div>
+);
 
 FormTodo.propTypes = {
     currentTodo: string,

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FormTodo} from '../../components';
+import {FormTodo, TabsTodo, ListTodo} from '../../components';
 import guid from '../../helpers/guid';
 
 class App extends Component {
@@ -37,17 +37,14 @@ class App extends Component {
 
         return (
             <section className='todo-container'>
+                <h1>TODO LIST</h1>
+                <TabsTodo/>
                 <FormTodo
                     currentTodo={value}
                     handleClick={this.handleClick}
                     handleChange={this.handleChange}
                 />
-                {/* мапим элементы массива и задаем каждому элменту уникальный идентификатор */}
-                <ol className='todo-list'>
-                    {values.map((item, index) => (
-                        <li key={item.id} className={statusClass} onClick={this.handleItemClick}>{item.value}</li>
-                    ))}
-                </ol>
+                <ListTodo/>
             </section>
         );
     }
