@@ -1,20 +1,21 @@
 import React from 'react';
-import {string, func} from 'prop-types';
+import PropTypes from 'prop-types';
+import {ALL, DONE, PROCESS} from '../../const/TabsState'
 
+const {func} = PropTypes;
 
-
-function TabsTodo(props) {
+function TabsTodo({selectTab}) {
     return (
-        <div>
-            <button type='button'>All</button>
-            <button type='button'>Done</button>
-            <button type='button'>In progress</button>
+        <div className='todo-tabs'>
+            <button type='button' onClick={() => selectTab(ALL)}>All</button>
+            <button type='button' onClick={() => selectTab(DONE)}>Done</button>
+            <button type='button' onClick={() => selectTab(PROCESS)}>In progress</button>
         </div>
     );
 }
 
 TabsTodo.propTypes = {
-    props:string,
+    selectTab: func.isRequired,
 };
 TabsTodo.defaultProps = {};
 

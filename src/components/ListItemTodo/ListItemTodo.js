@@ -1,13 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ListItemTodo(props) {
+const {string, func, bool} = PropTypes;
+function ListItemTodo({deleteItem, id, value, done}) {
     return (
-        <li>tasktoDo</li>
+        <li className={done ? 'done' : 'progress'}
+            onClick={() => {
+                deleteItem(id);
+            }}>
+            {value}
+        </li>
     );
 }
 
-ListItemTodo.propTypes = {};
-ListItemTodo.defaultProps = {};
+ListItemTodo.propTypes = {
+    deleteItem: func.isRequired,
+    id: string.isRequired,
+    value: string.isRequired,
+    done: bool.isRequired
+};
 
 export default ListItemTodo;

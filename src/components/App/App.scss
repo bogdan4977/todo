@@ -8,14 +8,81 @@
   justify-content: $justify-content;
   align-items: $align-items;
 }
+body{
+  background: antiquewhite;
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+}
 #root{
   @include flex(center,center);
   padding: 1%;
   color: $text-color;
+  font-size:1em;
 }
 .todo-container{
   max-width: $list-width;
   h1{
     text-align: center;
+  }
+}
+.todo-list{
+  list-style: none;
+  font-weight: bolder;
+  margin: 5px 0;
+  color: #fff;
+  padding: 0;
+  li{
+    display: block;
+    height: 2em;
+    line-height: 2em;
+    border-radius: $border-radus;
+    background-color: $listItemsBg;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: ease 700ms;
+    &.progress{
+      text-decoration: none;
+    }
+    &.done{
+      background-color: $listItemsBgDone;
+      cursor: default;
+    }
+  }
+}
+.form-box{
+  @include flex(center,center);
+  margin-bottom: 10px;
+  input{
+    height: 2.5em;
+    line-height: 2.5em;
+    padding: 0 10px;
+    border-radius: $border-radus;
+    outline: none;
+    border: none;
+    margin-right: 10px;
+    min-width:200px;
+  }
+  button{
+    height: 2.5em;
+    line-height: 2.5em;
+    border: none;
+    border-radius: $border-radus;
+    outline: none;
+    background-color: $button-color;
+    color: #fff;
+  }
+}
+.todo-tabs{
+  @include flex(space-between, initial);
+  margin-bottom: 10px;
+  button{
+    background-color: $button-color;
+    width: 29%;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: $border-radus;
+    padding: 0.5em 0;
   }
 }
